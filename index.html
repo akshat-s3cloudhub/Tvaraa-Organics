@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Tvaraa Organics</title>
+        <link rel="icon" type="image/svg" href="./img/logo.svg"/>
+        <link rel="stylesheet" href="./main.css"/>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <label class="logo">
+                    <picture>
+                        <source srcset="./img/logo.svg" type="image/webp">
+                        <img src="./img/logo.svg" alt="logo"/>
+                    </picture>
+                </label> 
+                <input type="checkbox" id="check"/>
+                <ul class="nav">
+                    <li>
+                        <a class="active" href="#home">About the product</a>
+                    </li>
+                    <li>
+                        <a href="#catalog">Catalog</a>
+                    </li>
+                    <li>
+                        <a href="#promo">Stock</a>
+                    </li>
+                    <li>
+                        <a href="#useful">Useful</a>
+                    </li>
+                    <li>
+                        <a href="#authors">Our company</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__right">
+                <div class="header-cart-container" id="openPop">
+                    <picture><source srcset="./img/header/cart-img.webp" type="image/webp">
+                        <img class="shop-cart-icon" src="./img/header/cart-img.png" alt="cart"/>
+                    </picture><div class="counter" id="cartQty">
+                    </div> 
+                    <button class="circle-bg"></button>
+                </div>
+                <div class="header-socials">
+                    <a style="color: var(--accent-color)" href="#!">
+                        <picture>
+                            <source srcset="./img/s-contacts/facebook-logo.webp" type="image/webp">
+                            <img src="./img/s-contacts/facebook-logo.png" alt="facebook">
+                        </picture>
+                    </a>
+                    <a style="color: var(--accent-color)" href="#!">
+                        <picture>
+                            <source srcset="./img/s-contacts/instagram-logo.webp" type="image/webp">
+                            <img src="./img/s-contacts/instagram-logo.png" alt="instagram">
+                        </picture>
+                    </a>
+                </div>
+                <label for="check" class="checkbtn">
+                    <div class="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </label>
+            </div>
+            <div class="cart-popup" id="pop">
+                <div class="cart-popup__wrapper">
+                    <p class="cart-popup__title">Your cart</p>
+                    <div class="cart-popup__items">
+                        <div class="cart-popup__item">
+                            <p>Moisturizing mask</p>
+                            <div>
+                                <span>2</span> pcs
+                            </div>
+                        </div>
+                        <div class="cart-popup__item">
+                            <p>Washing gel</p>
+                            <div>
+                                <span>1</span> pcs
+                            </div>
+                        </div>
+                        <div class="cart-popup__item">
+                            <p>Moisturizing mousse</p>
+                            <div>
+                                <span>1</span> pcs
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        Total goods: <span id="totalQty">5</span>
+                    </div>
+                    <div>
+                        Final price: <span>4650 INR</span>
+                    </div> 
+                    <a href="#!">Go to payment page</a> 
+                    <button id="closePop">Close</button>
+                </div>
+            </div>
+        </header>
+        <section class="home" id="home">
+            <h1 class="home__title">Tvaraa Organics</h1>
+            <picture>
+                <source srcset="./img/s-home/main-dandelion.webp" type="image/webp">
+                <img class="home__dandelion" src="./img/s-home/main-dandelion.png"/>
+            </picture>
+            <div class="home__info">
+                <h4> Natural cosmetics<br/> with a taste of India</h4>
+                <p>We use all the power of nature, as well as the latest industry developments, coupled with traditional Irish recipes</p>
+            </div>
+            <div class="home__btn-wrapper"> 
+                <a class="home__btn" href="#catalog">Select product</a>
+            </div>
+            <div class="home__info2">
+                <p> The ingredients are quality and origin controlled. Most of them have organic certification from Ecocert and Soil Association.</p>
+                <p> The basis is active natural complexes, vitamins C, A, PP, B and E, oils, waxes, minerals and natural sunscreen components.</p>
+                <h4>Tvaraa Organics — only natural ingredients</h4>
+            </div>
+        </section>
+        <picture>
+            <source srcset="./img/s-home/main-leafs.webp" type="image/webp">
+            <img class="home__leafs" src="./img/s-home/main-leafs.png" alt="leafs"/>
+        </picture>
+        <div class="container">
+            <main>
+                <picture>
+                    <source srcset="./img/s-home/main-berries.webp" type="image/webp">
+                    <img class="home__berries" src="./img/s-home/main-berries.png"/>
+                </picture>
+                <section class="catalog" id="catalog">
+                    <picture>
+                        <source srcset="./img/cards/cards-dandelions.webp" type="image/webp">
+                        <img class="catalog__img" src="./img/cards/cards-dandelions.png"/>
+                    </picture>
+                    <h2 class="title-s">Choose your product</h2>
+                    <ul class="filter-links">
+                        <li class="active-filter" data-filter="all">All</li>
+                        <li data-filter="normal">For normal skin</li>
+                        <li data-filter="dry">For dry skin</li>
+                        <li data-filter="oily">For oily skin</li>
+                        <li data-filter="mixed">For combination skin</li>
+                    </ul>
+                    <div class="cards-wrapper">
+                        <div class="card" data-filter="normal">
+                            <picture><source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for normal skin</p>
+                                <h3>Moisturizing mousse</h3>
+                                <div class="card__price">
+                                    <!---<p>2,150 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png"/>
+                                        </picture>--->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="normal">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for normal skin</p>
+                                <h3>Moisturizing mask</h3>
+                                <div class="card__price">
+                                    <!---<p>2,750 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture>--->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="normal">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for normal skin</p>
+                                <h3>Washing gel</h3>
+                                <div class="card__price">
+                                    <!---<p>1,400 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture>--->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="dry">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for dry skin</p>
+                                <h3>Moisturizing mousse</h3>
+                                <div class="card__price">
+                                    <!---<p>1 650 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture>--->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="dry">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for dry skin</p>
+                                <h3>Day cream</h3>
+                                <div class="card__price">
+                                    <!---<p>1 550 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture>--->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="dry">
+                            <picture><source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for dry skin</p>
+                                <h3>Washing gel</h3>
+                                <div class="card__price">
+                                    <!---<p>1 650 INR</p>
+                                    <a href="#!">
+                                        <picture><source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture>--->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="oily">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/1.jpg" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for oily skin</p>
+                                <h3>Moisturizing mask</h3>
+                                <div class="card__price">
+                                    <!-- <p>2 650 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="oily">
+                            <picture><source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/card-01-jar.png" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for oily skin</p>
+                                <h3>Moisturizing mousse</h3>
+                                <div class="card__price">
+                                    <!-- <p>1 650 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="oily">
+                            <picture><source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/cards-02-jar.png" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for oily skin</p>
+                                <h3>Day cream</h3>
+                                <div class="card__price">
+                                    <!-- <p>1 550 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="mixed">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/cards-02-jar.png" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for combination skin</p>
+                                <h3>Moisturizing mousse</h3>
+                                <div class="card__price">
+                                    <!-- <p>1 200 INR</p>
+                                    <a href="#!">
+                                        <picture><source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="mixed">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/cards-02-jar.png" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for combination skin</p>
+                                <h3>Washing gel</h3>
+                                <div class="card__price">
+                                    <!-- <p>2 100 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card" data-filter="mixed">
+                            <picture>
+                                <source srcset="./img/cards/1.jpg" type="image/webp">
+                                <img class="card__img" src="./img/cards/card-01-jar.png" alt="jar"/>
+                            </picture>
+                            <div class="card__info">
+                                <p>for combination skin</p>
+                                <h3>Moisturizing mask</h3>
+                                <div class="card__price">
+                                    <!-- <p>1 350 INR</p>
+                                    <a href="#!">
+                                        <picture>
+                                            <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                            <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                        </picture> -->
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="promo" id="promo"><div class="promo__info">
+                    <h2 class="title-s">Stock</h2>
+                    <p> Every month we select a special line of products that you like and reduce the prices!</p>
+                    <div>
+                        <picture>
+                            <source srcset="./img/promo/arrow.webp" type="image/webp">
+                            <img class="prev" src="./img/promo/arrow.png" alt="arrow"/>
+                        </picture>
+                        <picture>
+                            <source srcset="./img/promo/arrow.webp" type="image/webp">
+                            <img class="next" src="./img/promo/arrow.png" alt="arrow"/>
+                        </picture>
+                    </div>
+                </div>
+                <div class="splide">
+                    <div class="splide__track">
+                        <div class="splide__list">
+                            <div class="promo__card splide__slide">
+                                <div class="promo__card-info">
+                                    <div>01</div>
+                                    <h4> Invisible symphony - your magic wand to combat imperfections</h4>
+                                    <p> Combining the energy of nature and the possibilities of science, it restores your skin, helps cell regeneration, smoothes the relief, intensively moisturizes for a long time</p>
+                                </div>
+                                <picture>
+                                    <source srcset="./img/cards/1.jpg" type="image/webp">
+                                    <img src="./img/cards/1.jpg" alt="jar"/>
+                                </picture>
+                            </div>
+                            <div class="promo__card splide__slide">
+                                <div class="promo__card-info">
+                                    <div>02</div>
+                                    <h4> Dive into a world of incredible hydration with our unique Gentle Renewal Cream</h4>
+                                    <p> The balanced formula is enriched with natural oils that moisturize the skin, leaving it soft and elastic.</p>
+                                </div>
+                                <picture>
+                                    <source srcset="./img/cards/1.jpg" type="image/webp">
+                                    <img src="./img/cards/card-01-jar.png" alt="jar"/>
+                                </picture>
+                            </div>
+                            <div class="promo__card splide__slide">
+                                <div class="promo__card-info">
+                                    <div>03</div>
+                                    <h4> Harmony Cleanse is the perfect way to achieve clean and fresh skin every day.</h4>
+                                    <p> A unique blend of natural extracts such as green tea and lavender provides maximum cleansing without drying out the skin.</p>
+                                </div>
+                                <picture>
+                                    <source srcset="./img/cards/1.jpg" type="image/webp">
+                                    <img src="./img/cards/cards-03-jar.png" alt="jar"/>
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sales">
+                <picture>
+                    <source srcset="./img/promo/leaf.webp" type="image/webp">
+                    <img class="sales__img" src="./img/promo/leaf.png" alt="leaf"/>
+                </picture>
+                <div class="sales__1">
+                    <div class="sales-amount">DISCOUNT 5%</div>
+                    <div class="sales__info">
+                        <picture><source srcset="./img/s-sales/1.jpg" type="image/webp">
+                            <img src="./img/s-sales/1.png" alt="jars"/>
+                        </picture>
+                        <p>When you purchase a moisturizer and mask, you get a 5% discount on all products</p>
+                        <div class="sales__price">
+                            <!-- <div> 
+                                <span>5000</span>
+                                <p>4 750 INR</p>
+                            </div>
+                            <a href="#!">
+                                <picture>
+                                    <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                    <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                </picture>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="sales__1">
+                    <div class="sales-amount mod__2">DISCOUNT 10%</div>
+                    <div class="sales__info">
+                        <picture>
+                            <source srcset="./img/s-sales/1.jpg" type="image/webp">
+                            <img src="./img/s-sales/2.png" alt="jars"/>
+                        </picture>
+                        <p> When purchasing Moisturizing mousse and Washing gel, you get a 10% discount on all products</p>
+                        <div class="sales__price">
+                            <!-- <div> 
+                                <span>4400</span>
+                                <p>3 960 INR</p>
+                            </div>
+                            <a href="#!">
+                                <picture>
+                                    <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                    <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                </picture>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="sales__1">
+                    <div class="sales-amount mod__3">DISCOUNT 20%</div>
+                    <div class="sales__info"><picture>
+                        <source srcset="./img/s-sales/1.jpg" type="image/webp">
+                        <img src="./img/s-sales/3.png" alt="jars"/></picture>
+                        <p>By purchasing the entire Invisible Symphony set, you receive a 20% discount on all products</p>
+                        <div class="sales__price">
+                            <!-- <div> 
+                                <span>9400</span>
+                                <p>7 520 INR</p>
+                            </div>
+                            <a href="#!">
+                                <picture>
+                                    <source srcset="./img/cards/cards-cart.webp" type="image/webp">
+                                    <img class="card__cart" src="./img/cards/cards-cart.png" alt="cart"/>
+                                </picture>
+                            </a> -->
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="stat">
+                <h2 class="stat__title">Tvaraa Organics</h2>
+                <div class="stat__card">
+                    <picture>
+                        <source srcset="./img/s-stats/hero.webp" type="image/webp">
+                        <img class="stat__hero" src="./img/s-stats/hero.png"/>
+                    </picture>
+                    <div class="stat__info">
+                        <p>We tested it and are happy with the result.</p>
+                        <p>
+                            <span>6800</span>
+                           women
+                        </p>
+                        <p> 96% of women noticed positive results after just one week of using the product line.<br/> The skin became more well-groomed, moisturized and nourished.</p>
+                    </div>
+                </div>
+                <picture>
+                    <source srcset="./img/s-stats/leafs-bg.webp" type="image/webp">
+                    <img class="stat__leafs" src="./img/s-stats/leafs-bg.png" alt="leafs"/>
+                </picture>
+            </section>
+            <section class="useful" id="useful">
+                <h2 class="title-s">Useful to know</h2>
+                <div class="useful__articles">
+                    <a class="useful__item">
+                        <div class="useful__info"> 
+                            <span>Advice</span>
+                            <h4>How to choose a cream</h4>
+                            <p>7 criteria for the right choice. Under the influence of the environment, the skin loses nutrients...</p>
+                        </div>
+                        <p class="useful__link">read</p>
+                    </a>
+                    <a class="useful__item">
+                        <div class="useful__info"> 
+                            <span>Advice</span>
+                            <h4>What to add to your winter skincare routine</h4>
+                            <p>In winter, facial skin is in particular need of care. Cold and wind, dry air in heated rooms...</p>
+                        </div>
+                        <p class="useful__link">read</p>
+                    </a>
+                    <a class="useful__item">
+                        <div class="useful__info"> 
+                            <span>Advice</span>
+                            <h4>How to apply cream correctly</h4>
+                            <p> Any skin type should not be rubbed too hard when cleansing or toning, all movements...</p>
+                        </div>
+                        <p class="useful__link">read</p>
+                    </a>
+                    <a class="useful__item">
+                        <div class="useful__info"> 
+                            <span>Advice</span>
+                            <h4>How to Know Your Skin Type</h4>
+                            <p>Some people have naturally oily skin, others have dry and thin skin, and it is believed that in modern conditions...</p>
+                        </div>
+                        <p class="useful__link">read</p>
+                    </a>
+                </div>
+            </section>
+            <section class="company" id="authors">
+                <div class="content_box">
+                    <div class="content">
+                        <div class="content__info content-active">
+                            <h2 class="title-s company__title">Authors and ideologists</h2>
+                            <h4>Masha Shestyakova</h4>
+                            <p> Masha is the main ideologist, creator of the project and part-time main source of recipes. Masha's gimmick is an Irish grandmother, a former model with an endless supply of folk recipes that she has tried on herself.</p>
+                            <p> 
+                                <span>&#8220;</span> I like to adapt the culture of my ancestors to the present. I feel like I am creating a thread between different eras. And the fact that my product makes girls beautiful and confident makes me feel happy!</p>
+                            </div> 
+                            <img class="content__img content__img-active" src="./img/s-company/author.webp"/>
+                        </div>
+                        <div class="content">
+                            <div class="content__info">
+                                <h2 class="title-s company__title">Our mission</h2>
+                                <p> Our mission is to enable our customers to experience the power of nature in every product, bringing purity and naturalness to their self-care while highlighting their natural beauty. We are proud to support sustainable practices and carefully preserve the riches of nature for future generations.</p>
+                                <p> 
+                                    <span>&#8220;</span> Inspiring natural beauty with pure Irish energy, where strength and beauty come from natural ingredients
+                                </p>
+                            </div>
+                                <picture>
+                                    <source srcset="./img/s-company/mission.webp" type="image/webp">
+                                    <img class="content__img" src="./img/s-company/mission.png"/>
+                                </picture>
+                        </div>
+                        <div class="content">
+                            <div class="content__info">
+                                <h2 class="title-s company__title">Our clients</h2>
+                                <h4>With love and gratitude</h4>
+                                    <p> 
+                                        Welcome to the natural beauty family! You are not just customers, but our inspiring companions in self-care.
+
+                                    </p>
+                                    <p> 
+                                        <span>&#8220;</span> Thank you for trusting us. We strive to provide you with more than just products, but thoughtful self-care solutions to make your skin noticeably healthier and more beautiful.
+                                    </p>
+                            </div>
+                                    <picture>
+                                        <source srcset="./img/s-company/clients-big.webp" type="image/webp">
+                                        <img class="content__img" src="./img/s-company/clients-big.jpg"/>
+                                    </picture>
+                                </div>
+                                <picture>
+                                    <source srcset="./img/s-company/company-leafs.webp" type="image/webp">
+                                    <img class="company__leafs" src="./img/s-company/company-leafs.png"/>
+                                </picture>
+                        </div>
+                            <div class="tab"> 
+                                <button class="tab__btn tab-active"> 
+                                    <img src="./img/s-company/author.webp" alt="author"/>
+                                </button> 
+                                <button class="tab__btn">
+                                    <picture>
+                                        <source srcset="./img/s-company/mission.webp" type="image/webp">
+                                        <img src="./img/s-company/mission.png" alt="mission"/>
+                                    </picture>
+                                </button> 
+                                <button class="tab__btn">
+                                    <picture>
+                                        <source srcset="./img/s-company/clients.webp" type="image/webp">
+                                        <img src="./img/s-company/clients.png" alt="clients"/>
+                                    </picture>
+                                </button>
+                            </div>
+                        </section>
+                    </main>
+            </div>
+                <section class="contacts">
+                    <div class="contacts__wrapper">
+                        <h2 class="title-s contacts__title">Contacts</h2> 
+                        <a href="tel:+74955505050">+91 12345 67890</a>
+                        <p>Rajkot, Address, India 21</p>
+                        <div>
+                            <a href="#">
+                                <picture>
+                                    <source srcset="./img/s-contacts/facebook-logo.webp" type="image/webp">
+                                    <img src="./img/s-contacts/facebook-logo.png" alt="facebook"/>
+                                </picture>
+                            </a>
+                            <a href="#"><picture><source srcset="./img/s-contacts/instagram-logo.webp" type="image/webp">
+                                <img src="./img/s-contacts/instagram-logo.png" alt="instagram"/>
+                            </picture>
+                        </a>
+                    </div>
+                </div>
+                <div class="contacts__bg-blur">
+
+                </div>
+                <picture>
+                    <source srcset="./img/s-contacts/contacts-bg.webp" type="image/webp">
+                    <img src="./img/s-contacts/contacts-bg.png"/>
+                </picture>
+            </section>
+            <script src="/index.bundle.js">
+
+            </script>
+    </body>
+</html>
