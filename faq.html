@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Tvaraa Organics | Frequently Asked Questions</title>
+    <meta name="description" content="Find answers to frequently asked questions about Tvaraa Organics' manufacturing services, processes, certifications, and partnership opportunities.">
+    
+    <!-- Bootstrap 5 CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- AOS (Animate On Scroll) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <span class="brand-text">Tvaraa Organics</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="services.html" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            Services
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="services-contract-manufacturing.html">Contract Manufacturing</a></li>
+                            <li><a class="dropdown-item" href="services-private-label.html">Private Label</a></li>
+                            <li><a class="dropdown-item" href="services-third-party-manufacturing.html">Third Party Manufacturing</a></li>
+                            <li><a class="dropdown-item" href="services-rd-formulation.html">R&D & Formulation</a></li>
+                            <li><a class="dropdown-item" href="services-packaging.html">Packaging Solutions</a></li>
+                            <li><a class="dropdown-item" href="services-regulatory.html">Regulatory Services</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="process.html">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="certifications.html">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="faq.html">FAQ</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link btn btn-primary ms-2 px-4" href="get-a-quote.html">Get Quote</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Hero Section -->
+    <section class="page-hero" style="background: linear-gradient(135deg, rgba(73, 77, 105, 0.8), rgba(123, 109, 126, 0.7)), url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover; padding: 150px 0 100px;">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center text-white">
+                    <h1 class="display-4 mb-4" data-aos="fade-up">Frequently Asked Questions</h1>
+                    <p class="lead mb-0" data-aos="fade-up" data-aos-delay="200">
+                        Find answers to common questions about our services, processes, 
+                        certifications, and how to get started with Tvaraa Organics.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Search -->
+    <section class="py-4 bg-light" id="faq-search">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 mx-auto">
+                    <div class="input-group">
+                        <input type="text" class="form-control" id="faqSearch" placeholder="Search FAQ...">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Categories -->
+    <section class="py-4 bg-background" id="faq-categories">
+        <div class="container">
+            <div class="text-center">
+                <div class="btn-group-toggle" data-toggle="buttons">
+                    <button class="btn btn-outline-primary active me-2 mb-2" data-category="all">All Questions</button>
+                    <button class="btn btn-outline-primary me-2 mb-2" data-category="general">General</button>
+                    <button class="btn btn-outline-primary me-2 mb-2" data-category="services">Services</button>
+                    <button class="btn btn-outline-primary me-2 mb-2" data-category="manufacturing">Manufacturing</button>
+                    <button class="btn btn-outline-primary me-2 mb-2" data-category="quality">Quality</button>
+                    <button class="btn btn-outline-primary me-2 mb-2" data-category="pricing">Pricing</button>
+                    <button class="btn btn-outline-primary me-2 mb-2" data-category="shipping">Shipping</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Content -->
+    <section class="py-5" id="faq-content">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    
+                    <!-- General Questions -->
+                    <div class="faq-section mb-5" data-category="general" data-aos="fade-up">
+                        <h2 class="section-title text-center mb-4">General Questions</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What is Tvaraa Organics?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Tvaraa Organics is a leading organic contract manufacturing company specializing in the development and production of premium organic products. We offer comprehensive services including formulation development, manufacturing, packaging, and regulatory support for beauty, wellness, and personal care brands worldwide.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How long has Tvaraa Organics been in business?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We have been in business for over 15 years since our founding in 2009. During this time, we have built a reputation for excellence and have partnered with over 100 brands across 50+ countries.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What makes Tvaraa Organics different from other manufacturers?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our commitment to 100% organic ingredients, state-of-the-art GMP-certified facilities, comprehensive regulatory support, and end-to-end service offerings set us apart. We combine traditional knowledge with modern technology to deliver exceptional quality products.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Services Questions -->
+                    <div class="faq-section mb-5" data-category="services" data-aos="fade-up">
+                        <h2 class="section-title text-center mb-4">Services</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What services do you offer?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We offer comprehensive manufacturing solutions including:</p>
+                                <ul>
+                                    <li>Contract Manufacturing</li>
+                                    <li>Private Label Services</li>
+                                    <li>Third Party Manufacturing</li>
+                                    <li>R&D and Formulation Development</li>
+                                    <li>Packaging Solutions</li>
+                                    <li>Regulatory and Compliance Support</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Can you help with product formulation?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Absolutely! Our experienced R&D team can develop custom formulations based on your specifications, target market, and brand positioning. We work with you from initial concept through final product optimization.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Do you offer private label services?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we offer complete private label solutions including existing formulations, custom packaging design, branding support, and market-ready product development to help you launch your brand quickly.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Manufacturing Questions -->
+                    <div class="faq-section mb-5" data-category="manufacturing" data-aos="fade-up">
+                        <h2 class="section-title text-center mb-4">Manufacturing Process</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What is your manufacturing capacity?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Our 50,000+ square foot GMP-certified facility can handle orders ranging from small batches of 500 units to large-scale production runs of over 100,000 units. We have the flexibility to scale production based on your needs.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What types of products can you manufacture?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We manufacture a wide range of organic products including:</p>
+                                <ul>
+                                    <li>Skincare products (creams, serums, cleansers)</li>
+                                    <li>Hair care products (shampoos, conditioners, treatments)</li>
+                                    <li>Personal care items (body lotions, soaps, deodorants)</li>
+                                    <li>Baby care products</li>
+                                    <li>Health supplements (capsules, tablets, liquids)</li>
+                                    <li>Aromatherapy products and essential oils</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How long does the manufacturing process take?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Timeline varies based on product complexity and order size. Typically, existing formulations take 2-4 weeks, while custom formulations require 6-12 weeks including development and testing. We provide detailed timelines during the consultation phase.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quality Questions -->
+                    <div class="faq-section mb-5" data-category="quality" data-aos="fade-up">
+                        <h2 class="section-title text-center mb-4">Quality & Certifications</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What certifications do you have?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We maintain multiple international certifications including:</p>
+                                <ul>
+                                    <li>GMP (Good Manufacturing Practices)</li>
+                                    <li>ISO 9001:2015</li>
+                                    <li>USDA Organic</li>
+                                    <li>Halal Certification</li>
+                                    <li>Kosher Certification</li>
+                                    <li>FDA Registration</li>
+                                    <li>ECOCERT for Organic Cosmetics</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How do you ensure product quality?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We implement rigorous quality control measures including raw material testing, in-process monitoring, finished product analysis, stability testing, and comprehensive documentation. Every batch is tested before release.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Are all your ingredients organic?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we are committed to using 100% organic and natural ingredients in our formulations. All ingredients are sourced from certified organic suppliers and undergo thorough quality verification.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pricing Questions -->
+                    <div class="faq-section mb-5" data-category="pricing" data-aos="fade-up">
+                        <h2 class="section-title text-center mb-4">Pricing & Orders</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What are your minimum order quantities?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Minimum order quantities vary by product type and complexity. Generally, we start from 500 units for private label products and 1,000 units for custom formulations. Contact us for specific MOQ requirements for your project.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How is pricing determined?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Pricing is based on factors including formulation complexity, ingredients used, order quantity, packaging requirements, and additional services. We provide detailed, transparent quotes with no hidden fees.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Do you offer samples?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we provide samples for evaluation. For existing formulations, samples may be available after signing a confidentiality agreement. Custom formulation samples are provided during the development process.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shipping Questions -->
+                    <div class="faq-section mb-5" data-category="shipping" data-aos="fade-up">
+                        <h2 class="section-title text-center mb-4">Shipping & Logistics</h2>
+                        
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>Do you ship internationally?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Yes, we ship to over 50 countries worldwide. We have established logistics partnerships to ensure safe and timely delivery of products globally, with full documentation and regulatory compliance support.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>How are products packaged for shipping?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>Products are carefully packaged using appropriate protective materials to prevent damage during transit. We use temperature-controlled shipping for sensitive products and provide tracking information for all shipments.</p>
+                            </div>
+                        </div>
+
+                        <div class="faq-item">
+                            <div class="faq-question">
+                                <h4>What documentation do you provide for international shipments?</h4>
+                                <i class="fas fa-chevron-down"></i>
+                            </div>
+                            <div class="faq-answer">
+                                <p>We provide comprehensive documentation including certificates of analysis, ingredient lists, regulatory compliance documents, export certificates, and any other documentation required for customs clearance in your destination country.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="py-5 bg-light" id="contact-cta">
+        <div class="container">
+            <div class="text-center" data-aos="fade-up">
+                <h2 class="section-title">Still Have Questions?</h2>
+                <p class="section-subtitle mb-4">Our team is here to help you with any additional questions</p>
+                <div class="row justify-content-center">
+                    <div class="col-md-8">
+                        <div class="contact-options">
+                            <div class="row">
+                                <div class="col-md-4 mb-3">
+                                    <div class="contact-option">
+                                        <i class="fas fa-phone"></i>
+                                        <h5>Call Us</h5>
+                                        <p>+91 98765 43210</p>
+                                        <a href="tel:+919876543210" class="btn btn-outline-primary btn-sm">Call Now</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="contact-option">
+                                        <i class="fas fa-envelope"></i>
+                                        <h5>Email Us</h5>
+                                        <p>info@tvaraaorganics.com</p>
+                                        <a href="mailto:info@tvaraaorganics.com" class="btn btn-outline-primary btn-sm">Send Email</a>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="contact-option">
+                                        <i class="fas fa-comments"></i>
+                                        <h5>Live Chat</h5>
+                                        <p>Get instant answers</p>
+                                        <a href="contact.html" class="btn btn-outline-primary btn-sm">Start Chat</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer py-5" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-brand">
+                        <h4>Tvaraa Organics</h4>
+                        <p>Leading organic contract manufacturing company committed to excellence, quality, and sustainability in every product we create.</p>
+                        <div class="social-links">
+                            <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="services-contract-manufacturing.html">Contract Manufacturing</a></li>
+                        <li><a href="services-private-label.html">Private Label</a></li>
+                        <li><a href="services-third-party-manufacturing.html">Third Party Manufacturing</a></li>
+                        <li><a href="services-rd-formulation.html">R&D & Formulation</a></li>
+                        <li><a href="services-packaging.html">Packaging</a></li>
+                        <li><a href="services-regulatory.html">Regulatory</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="process.html">Process</a></li>
+                        <li><a href="certifications.html">Certifications</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p>Stay updated with our latest news and industry insights.</p>
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <button class="btn btn-primary" type="submit">Subscribe</button>
+                        </div>
+                    </form>
+                    <div class="contact-info mt-4">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Manufacturing Avenue, Industrial Zone, Mumbai, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+91 98765 43210</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@tvaraaorganics.com</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2025 Akshat Chudasama | Instagram: <a href="https://www.instagram.com/akshat_7666" target="_blank" rel="noopener noreferrer" class="footer-link">@akshat_7666</a></p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <a href="#" class="footer-legal">Privacy Policy</a>
+                    <a href="#" class="footer-legal">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="assets/js/main.js"></script>
+
+    <style>
+        .faq-item {
+            background: white;
+            border-radius: 15px;
+            margin-bottom: 1rem;
+            box-shadow: 0 2px 10px rgba(73, 77, 105, 0.1);
+            overflow: hidden;
+            border: 1px solid rgba(73, 77, 105, 0.1);
+        }
+
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: between;
+            align-items: center;
+            cursor: pointer;
+            background: white;
+            transition: background-color 0.3s ease;
+            border-bottom: 1px solid #eee;
+        }
+
+        .faq-question:hover {
+            background: var(--background-color);
+        }
+
+        .faq-question h4 {
+            margin: 0;
+            color: var(--primary-color);
+            flex-grow: 1;
+            padding-right: 1rem;
+        }
+
+        .faq-question i {
+            color: var(--primary-color);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+            background: #fafafa;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer > div {
+            padding: 1.5rem 2rem;
+        }
+
+        .faq-answer p, .faq-answer ul {
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer ul {
+            padding-left: 1.5rem;
+        }
+
+        .faq-answer li {
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+        }
+
+        .contact-option {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 2px 10px rgba(73, 77, 105, 0.1);
+            height: 100%;
+        }
+
+        .contact-option i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-option h5 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        #faq-categories button.active {
+            background-color: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+    </style>
+
+    <script>
+        // FAQ functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            const faqSearch = document.getElementById('faqSearch');
+            const categoryButtons = document.querySelectorAll('[data-category]');
+
+            // FAQ item click handlers
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', function() {
+                    const isActive = item.classList.contains('active');
+                    
+                    // Close all FAQ items
+                    faqItems.forEach(faqItem => {
+                        faqItem.classList.remove('active');
+                        const faqAnswer = faqItem.querySelector('.faq-answer');
+                        faqAnswer.style.maxHeight = '0';
+                    });
+                    
+                    // Open clicked item if it wasn't active
+                    if (!isActive) {
+                        item.classList.add('active');
+                        answer.style.maxHeight = answer.scrollHeight + 'px';
+                    }
+                });
+            });
+
+            // Category filtering
+            categoryButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const category = this.getAttribute('data-category');
+                    
+                    // Update active button
+                    categoryButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Filter FAQ sections
+                    const faqSections = document.querySelectorAll('.faq-section');
+                    faqSections.forEach(section => {
+                        if (category === 'all' || section.getAttribute('data-category') === category) {
+                            section.style.display = 'block';
+                        } else {
+                            section.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            if (faqSearch) {
+                faqSearch.addEventListener('input', function() {
+                    const searchTerm = this.value.toLowerCase();
+                    
+                    faqItems.forEach(item => {
+                        const questionText = item.querySelector('.faq-question h4').textContent.toLowerCase();
+                        const answerText = item.querySelector('.faq-answer').textContent.toLowerCase();
+                        
+                        if (questionText.includes(searchTerm) || answerText.includes(searchTerm)) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = searchTerm ? 'none' : 'block';
+                        }
+                    });
+                });
+            }
+        });
+    </script>
+</body>
+</html>
