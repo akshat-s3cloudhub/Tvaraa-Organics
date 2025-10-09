@@ -80,10 +80,13 @@ function initializeNavbar() {
     dropdownToggles.forEach(toggle => {
         // Ensure Bootstrap Dropdown instance exists
         const dd = bootstrap.Dropdown.getOrCreateInstance(toggle, { autoClose: false });
+        
+        // Handle click events for mobile dropdown
         toggle.addEventListener('click', function(e) {
             if (window.innerWidth < 992) {
                 e.preventDefault();
                 e.stopPropagation();
+                
                 // Close any other open dropdowns within navbar
                 document.querySelectorAll('.navbar .dropdown-toggle[aria-expanded="true"]').forEach(openTgl => {
                     if (openTgl !== toggle) {
@@ -91,6 +94,7 @@ function initializeNavbar() {
                         inst.hide();
                     }
                 });
+                
                 // Toggle this dropdown
                 const inst = bootstrap.Dropdown.getOrCreateInstance(this, { autoClose: false });
                 // If not expanded, show; else hide
@@ -101,7 +105,18 @@ function initializeNavbar() {
                 }
             }
         });
+        
+        // Handle touch events for better mobile experience
+        toggle.addEventListener('touchstart', function(e) {
+            if (window.innerWidth < 992) {
+                // Add touchstart handler for iOS compatibility
+                this.classList.add('touched');
+            }
+        });
     });
+    
+    // Add touch support for iOS devices
+    document.addEventListener('touchstart', function() {}, true);
 
     // Cleanup on resize: ensure dropdowns reset when switching to desktop
     window.addEventListener('resize', () => {

@@ -1267,9 +1267,142 @@ img {
     object-fit: cover;
 }
 
+/* Hero USP Strip */
+.hero-usp-strip {
+    margin-top: 4rem;
+    padding: 0 1rem;
+}
+
+.usp-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.usp-item {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: var(--transition-slow);
+    min-width: 200px;
+    cursor: default;
+}
+
+.usp-item:hover {
+    background: rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.usp-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--accent-color), rgba(255, 255, 255, 0.3));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+    box-shadow: 0 4px 15px rgba(189, 195, 199, 0.3);
+}
+
+.usp-text {
+    display: flex;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.usp-label {
+    font-weight: 600;
+    font-size: 0.95rem;
+    line-height: 1.2;
+    margin-bottom: 0.2rem;
+}
+
+.usp-desc {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    font-weight: 400;
+}
+
+/* Mobile USP Strip */
+@media (max-width: 991px) {
+    .usp-container {
+        gap: 1rem;
+        justify-content: space-around;
+    }
+    
+    .usp-item {
+        min-width: 180px;
+        padding: 0.8rem 1.2rem;
+        flex: 0 1 calc(50% - 0.5rem);
+    }
+    
+    .usp-icon {
+        width: 45px;
+        height: 45px;
+        margin-right: 0.8rem;
+        font-size: 1.1rem;
+    }
+    
+    .usp-label {
+        font-size: 0.9rem;
+    }
+    
+    .usp-desc {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero-usp-strip {
+        margin-top: 3rem;
+        padding: 0 0.5rem;
+    }
+    
+    .usp-container {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+    
+    .usp-item {
+        min-width: auto;
+        width: 100%;
+        max-width: 280px;
+        padding: 0.8rem 1rem;
+        flex: none;
+    }
+    
+    .usp-icon {
+        width: 40px;
+        height: 40px;
+        margin-right: 0.8rem;
+        font-size: 1rem;
+    }
+    
+    .usp-label {
+        font-size: 0.85rem;
+    }
+    
+    .usp-desc {
+        font-size: 0.7rem;
+    }
+}
+
 /* ==========================================
    RESPONSIVE DESIGN
-   ========================================== */
+   ========================...(truncated)
 
 @media (max-width: 1200px) {
     .container {
