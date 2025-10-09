@@ -46,19 +46,69 @@ function initializeNavbar() {
         });
     });
     
-    // Mobile menu close after click
+    // Mobile menu close after click (avoid closing when tapping dropdown toggles)
     const navbarCollapse = document.querySelector('.navbar-collapse');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-    
+
     navLinks.forEach(link => {
-        link.addEventListener('click', () => {
+        link.addEventListener('click', (e) => {
             if (window.innerWidth < 992) {
-                const bsCollapse = new bootstrap.Collapse(navbarCollapse, {
-                    toggle: false
-                });
+                // If this is a dropdown toggle in mobile, do NOT close the navbar
+                const isDropdownToggle = link.classList.contains('dropdown-toggle') || link.getAttribute('data-bs-toggle') === 'dropdown';
+                if (isDropdownToggle) {
+                    return;
+                }
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
                 bsCollapse.hide();
             }
         });
+    });
+
+    // Close navbar when a dropdown item is selected (mobile only)
+    const dropdownItems = document.querySelectorAll('.dropdown-menu .dropdown-item');
+    dropdownItems.forEach(item => {
+        item.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+                bsCollapse.hide();
+            }
+        });
+    });
+
+    // Fix for mobile dropdown menus using Bootstrap Dropdown API (tap to open Services submenu)
+    const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+    dropdownToggles.forEach(toggle => {
+        // Ensure Bootstrap Dropdown instance exists
+        const dd = bootstrap.Dropdown.getOrCreateInstance(toggle, { autoClose: false });
+        toggle.addEventListener('click', function(e) {
+            if (window.innerWidth < 992) {
+                e.preventDefault();
+                e.stopPropagation();
+                // Close any other open dropdowns within navbar
+                document.querySelectorAll('.navbar .dropdown-toggle[aria-expanded="true"]').forEach(openTgl => {
+                    if (openTgl !== toggle) {
+                        const inst = bootstrap.Dropdown.getOrCreateInstance(openTgl, { autoClose: false });
+                        inst.hide();
+                    }
+                });
+                // Toggle this dropdown
+                const inst = bootstrap.Dropdown.getOrCreateInstance(this, { autoClose: false });
+                // If not expanded, show; else hide
+                if (this.getAttribute('aria-expanded') === 'true') {
+                    inst.hide();
+                } else {
+                    inst.show();
+                }
+            }
+        });
+    });
+
+    // Cleanup on resize: ensure dropdowns reset when switching to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth >= 992) {
+            document.querySelectorAll('.navbar .dropdown-menu.show').forEach(menu => menu.classList.remove('show'));
+            document.querySelectorAll('.navbar .dropdown.show').forEach(dd => dd.classList.remove('show'));
+        }
     });
 }
 
@@ -143,7 +193,7 @@ function initializeGSAP() {
     });
     
     // Cards animation
-    gsap.utils.toArray('.stat-card, .category-card, .process-step').forEach((card, index) => {
+    gsap.utils.toArray('.stat-card, .feature-card, .category-card, .process-step').forEach((card, index) => {
         gsap.fromTo(card,
             {
                 opacity: 0,
