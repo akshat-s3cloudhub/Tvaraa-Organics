@@ -171,6 +171,34 @@ function initializeGSAP() {
             }
         );
     }
+
+    // Layered hero visual entrance
+    const layers = gsap.utils.toArray('.bottle-layer');
+    if (layers.length) {
+        // set initial states for a nice staged entrance
+        gsap.set('.layer-1', { y: 80, rotate: -10, opacity: 0 });
+        gsap.set('.layer-2', { y: 90, rotate: 10, opacity: 0 });
+        gsap.set('.layer-3', { y: 100, rotate: 0, opacity: 0 });
+
+        const tl = gsap.timeline();
+        tl.to('.layer-1', { opacity: 1, y: 0, rotate: -6, duration: 0.8, ease: 'power3.out' })
+          .to('.layer-2', { opacity: 1, y: 0, rotate: 6,  duration: 0.8, ease: 'power3.out' }, '-=0.6')
+          .to('.layer-3', { opacity: 1, y: 0, rotate: 0,  duration: 0.8, ease: 'power3.out' }, '-=0.6');
+
+        // Scroll parallax/tilt effect across hero viewport
+        ScrollTrigger.create({
+            trigger: '.hero-section',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+            onUpdate: (self) => {
+                const p = self.progress; // 0..1 through the hero
+                gsap.to('.layer-1', { y: -60 * p, x: -20 * p, rotate: -6 - 3 * p, overwrite: 'auto' });
+                gsap.to('.layer-2', { y: -80 * p, x:  30 * p, rotate:  6 + 3 * p, overwrite: 'auto' });
+                gsap.to('.layer-3', { y: -100 * p, scale: 1 - 0.05 * p, overwrite: 'auto' });
+            }
+        });
+    }
     
     // Parallax background effect
     const parallaxBg = document.querySelector('.parallax-bg');

@@ -335,7 +335,36 @@ h1, h2, h3, h4, h5, h6 {
     z-index: -2;
 }
 
-/* Mobile Hero Optimizations */
+/* Layered hero visuals */
+.hero-visual {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure text sits above visuals */
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.bottle-layer {
+    position: absolute;
+    max-width: 28vw;
+    width: 380px;
+    height: auto;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 30px rgba(0,0,0,0.35));
+    opacity: 0; /* animated in */
+}
+
+/* initial placements (overridden by GSAP) */
+.layer-1 { left: 6%; bottom: -40px; transform: rotate(-6deg); }
+.layer-2 { right: 10%; bottom: -50px; transform: rotate(6deg); }
+.layer-3 { left: 50%; bottom: -60px; transform: translateX(-50%) rotate(0deg); max-width: 22vw; }
+
+/***** Mobile Hero Optimizations *****/
 @media (max-width: 768px) {
     .hero-section {
         min-height: 100vh;
@@ -391,6 +420,10 @@ h1, h2, h3, h4, h5, h6 {
     .scroll-indicator {
         bottom: 20px;
     }
+    
+    /* reduce visual noise on mobile */
+    .bottle-layer { max-width: 42vw; }
+    .layer-3 { display: none; }
 }
 
 @media (max-width: 480px) {

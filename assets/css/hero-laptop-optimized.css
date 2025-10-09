@@ -1,0 +1,777 @@
+/**
+ * Dell Latitude 3490 Optimized Hero Section
+ * Perfect for 1366x768, 1920x1080 and all screen sizes
+ * Guaranteed no overflow, professional look
+ */
+
+/* ==========================================
+   GLOBAL RESETS & BASE
+   ========================================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.hero-section {
+    position: relative;
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: linear-gradient(135deg, #2b3d4f 0%, #354a5f 50%, #5d6d7e 100%);
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-top: 80px; /* Account for navbar */
+}
+
+/* Background Video Styling */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.3; /* Make video subtle */
+}
+
+/* Hide video on mobile to save bandwidth */
+@media (max-width: 767px) {
+    .hero-video {
+        display: none;
+    }
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        rgba(43, 61, 79, 0.7) 0%,
+        rgba(53, 74, 95, 0.6) 50%,
+        rgba(93, 109, 126, 0.7) 100%
+    );
+    z-index: 1;
+}
+
+/* Stronger overlay on mobile when video is hidden */
+@media (max-width: 767px) {
+    .hero-overlay {
+        background: linear-gradient(
+            135deg,
+            rgba(43, 61, 79, 0.9) 0%,
+            rgba(53, 74, 95, 0.8) 50%,
+            rgba(93, 109, 126, 0.9) 100%
+        );
+    }
+}
+
+/* ==========================================
+   CONTAINER & CONTENT
+   ========================================== */
+
+.hero-section .container {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+}
+
+.hero-content {
+    text-align: center;
+    padding: 2rem 0;
+    max-width: 100%;
+}
+
+/* ==========================================
+   HERO ELEMENTS
+   ========================================== */
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.hero-badge:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.hero-badge i {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
+
+.hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4.5vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.hero-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto 1.5rem;
+    font-weight: 400;
+}
+
+/* ==========================================
+   PRODUCT ICONS - COMPACT LAYOUT
+   ========================================== */
+
+.product-icons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.product-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.8rem 0.6rem;
+    border-radius: 12px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    min-width: 70px;
+    max-width: 85px;
+    text-align: center;
+}
+
+.product-icon:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-3px);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.product-icon i {
+    font-size: 1.3rem;
+    color: #bdc3c7;
+    margin-bottom: 0.2rem;
+}
+
+.product-icon span {
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    line-height: 1.1;
+}
+
+/* ==========================================
+   HERO STATISTICS - COMPACT
+   ========================================== */
+
+.hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 70px;
+}
+
+.stat-number {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.3rem, 3vw, 1.8rem);
+    font-weight: 700;
+    color: #bdc3c7;
+    line-height: 1;
+    margin-bottom: 0.2rem;
+}
+
+.stat-label {
+    font-size: clamp(0.7rem, 1.8vw, 0.8rem);
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
+}
+
+/* ==========================================
+   HERO BUTTONS - OPTIMIZED
+   ========================================== */
+
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+    padding: 0 1rem;
+}
+
+.hero-buttons .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1.5rem;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    border: 2px solid transparent;
+    min-width: 140px;
+    max-width: 200px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #5d6d7e, #354a5f);
+    color: #ffffff;
+    box-shadow: 0 6px 20px rgba(53, 74, 95, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #bdc3c7, #5d6d7e);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(53, 74, 95, 0.4);
+    color: #2b3d4f;
+    text-decoration: none;
+}
+
+.btn-outline-light {
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.btn-outline-light:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* ==========================================
+   DELL LATITUDE 3490 SPECIFIC OPTIMIZATIONS
+   ========================================== */
+
+/* 1366x768 - Common Dell Latitude 3490 resolution */
+@media (min-width: 1360px) and (max-width: 1380px) and (min-height: 760px) and (max-height: 780px) {
+    .hero-section {
+        min-height: 100vh;
+        padding-top: 70px;
+    }
+    
+    .hero-content {
+        padding: 1.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2.2rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .product-icons {
+        gap: 1.2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 0.8rem 1.8rem;
+        font-size: 0.95rem;
+    }
+}
+
+/* 1920x1080 - Higher resolution Dell laptops */
+@media (min-width: 1900px) and (max-width: 1940px) and (min-height: 1060px) and (max-height: 1100px) {
+    .hero-content {
+        padding: 2.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-icons {
+        gap: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-icon {
+        min-width: 85px;
+        max-width: 100px;
+        padding: 1rem 0.8rem;
+    }
+    
+    .hero-stats {
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 1rem 2.2rem;
+        font-size: 1.1rem;
+        min-width: 160px;
+    }
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   ========================================== */
+
+/* Extra Small Devices (phones) - 320px to 575px */
+@media (max-width: 575px) {
+    .hero-section {
+        min-height: 100vh;
+        padding-top: 80px;
+    }
+    
+    .hero-content {
+        padding: 1rem 0;
+    }
+    
+    .hero-badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-title {
+        font-size: 1.6rem;
+        margin-bottom: 0.8rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.85rem;
+        margin-bottom: 1rem;
+    }
+    
+    .product-icons {
+        gap: 0.8rem;
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+    
+    .product-icon {
+        min-width: 60px;
+        max-width: 75px;
+        padding: 0.6rem 0.4rem;
+    }
+    
+    .product-icon i {
+        font-size: 1.1rem;
+    }
+    
+    .product-icon span {
+        font-size: 0.65rem;
+    }
+    
+    .hero-stats {
+        gap: 1.2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .stat-number {
+        font-size: 1.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.7rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.6rem;
+        margin-top: 1rem;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        min-width: auto;
+        padding: 0.8rem 1.5rem;
+        font-size: 0.85rem;
+    }
+}
+
+/* Small Devices (landscape phones, small tablets) - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+    .hero-content {
+        padding: 1.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .product-icons {
+        gap: 1rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-stats {
+        gap: 1.5rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 0.8rem 1.6rem;
+        font-size: 0.9rem;
+        min-width: 150px;
+    }
+}
+
+/* Medium Devices (tablets) - 768px to 991px */
+@media (min-width: 768px) and (max-width: 991px) {
+    .hero-content {
+        padding: 2rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2.4rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.05rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-icons {
+        gap: 1.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-icon {
+        min-width: 75px;
+        max-width: 90px;
+    }
+    
+    .hero-stats {
+        gap: 2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 0.9rem 2rem;
+        font-size: 1rem;
+        min-width: 160px;
+    }
+}
+
+/* Large Devices (desktops) - 992px to 1199px */
+@media (min-width: 992px) and (max-width: 1199px) {
+    .hero-content {
+        padding: 2.5rem 0;
+    }
+    
+    .hero-title {
+        font-size: 2.6rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-icons {
+        gap: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .product-icon {
+        min-width: 80px;
+        max-width: 95px;
+        padding: 0.9rem 0.7rem;
+    }
+    
+    .hero-stats {
+        gap: 2.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 0.9rem 2.1rem;
+        font-size: 1rem;
+        min-width: 170px;
+    }
+}
+
+/* Extra Large Devices (large desktops, 4K monitors) - 1200px+ */
+@media (min-width: 1200px) {
+    .hero-section .container {
+        max-width: 1200px;
+    }
+    
+    .hero-content {
+        padding: 3rem 0;
+    }
+    
+    .hero-title {
+        font-size: 3.2rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.25rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-icons {
+        gap: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .product-icon {
+        min-width: 90px;
+        max-width: 110px;
+        padding: 1.1rem 0.8rem;
+    }
+    
+    .product-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .product-icon span {
+        font-size: 0.8rem;
+    }
+    
+    .hero-stats {
+        gap: 3rem;
+        margin-bottom: 2rem;
+    }
+    
+    .stat-number {
+        font-size: 2.2rem;
+    }
+    
+    .stat-label {
+        font-size: 0.9rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 1.1rem 2.5rem;
+        font-size: 1.1rem;
+        min-width: 180px;
+    }
+}
+
+/* ==========================================
+   48" SCREEN OPTIMIZATION (4K TV/Monitor)
+   ========================================== */
+
+@media (min-width: 3000px) {
+    .hero-section .container {
+        max-width: 2400px;
+    }
+    
+    .hero-content {
+        padding: 4rem 0;
+    }
+    
+    .hero-badge {
+        font-size: 1.2rem;
+        padding: 1rem 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .hero-title {
+        font-size: 5rem;
+        margin-bottom: 2.5rem;
+    }
+    
+    .hero-subtitle {
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+        max-width: 1000px;
+    }
+    
+    .product-icons {
+        gap: 3rem;
+        margin-bottom: 3rem;
+    }
+    
+    .product-icon {
+        min-width: 140px;
+        max-width: 160px;
+        padding: 2rem 1.5rem;
+    }
+    
+    .product-icon i {
+        font-size: 2.5rem;
+    }
+    
+    .product-icon span {
+        font-size: 1.2rem;
+    }
+    
+    .hero-stats {
+        gap: 5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .stat-number {
+        font-size: 3.5rem;
+    }
+    
+    .stat-label {
+        font-size: 1.3rem;
+    }
+    
+    .hero-buttons .btn {
+        padding: 1.5rem 3.5rem;
+        font-size: 1.4rem;
+        min-width: 250px;
+    }
+}
+
+/* ==========================================
+   ACCESSIBILITY & UTILITIES
+   ========================================== */
+
+/* Focus states for accessibility */
+.hero-buttons .btn:focus,
+.product-icon:focus {
+    outline: 2px solid #bdc3c7;
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .hero-badge,
+    .product-icon,
+    .hero-buttons .btn {
+        transition: none !important;
+        transform: none !important;
+    }
+}
+
+/* High contrast support */
+@media (prefers-contrast: high) {
+    .hero-section {
+        background: #000000;
+        color: #ffffff;
+    }
+    
+    .hero-badge,
+    .product-icon {
+        border: 2px solid #ffffff;
+        background: rgba(255, 255, 255, 0.3);
+    }
+    
+    .btn-primary {
+        background: #ffffff;
+        color: #000000;
+        border: 2px solid #ffffff;
+    }
+    
+    .btn-outline-light {
+        background: transparent;
+        color: #ffffff;
+        border: 2px solid #ffffff;
+    }
+}
+
+/* Print styles */
+@media print {
+    .hero-section {
+        background: none !important;
+        color: #000000 !important;
+        min-height: auto;
+        padding: 2rem 0;
+    }
+    
+    .hero-overlay {
+        display: none;
+    }
+    
+    .hero-content,
+    .hero-title,
+    .hero-subtitle,
+    .product-icon span,
+    .stat-number,
+    .stat-label {
+        color: #000000 !important;
+    }
+    
+    .hero-badge,
+    .product-icon {
+        border: 1px solid #000000 !important;
+        background: none !important;
+    }
+}
+
+/* Prevent horizontal overflow at all costs */
+html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+}
+
+.row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.col-12, .col-md-10, .col-lg-8 {
+    padding-left: 15px;
+    padding-right: 15px;
+}
