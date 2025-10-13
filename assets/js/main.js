@@ -287,6 +287,75 @@ function initializeGSAP() {
 // ==========================================
 
 function initializeSwiper() {
+    // Categories Carousel Swiper
+    const categoriesSwiper = document.querySelector('.categories-swiper');
+    if (categoriesSwiper) {
+        new Swiper('.categories-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            centeredSlides: false,
+            autoplay: {
+                delay: 4500,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+            },
+            speed: 800,
+            effect: 'slide',
+            grabCursor: true,
+            pagination: {
+                el: '.categories-pagination',
+                clickable: true,
+                dynamicBullets: true,
+            },
+            navigation: {
+                nextEl: '.categories-next',
+                prevEl: '.categories-prev',
+            },
+            breakpoints: {
+                576: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 25,
+                },
+                992: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 35,
+                },
+                1400: {
+                    slidesPerView: 4,
+                    spaceBetween: 35,
+                }
+            },
+            on: {
+                init: function() {
+                    // Add entrance animation to visible slides
+                    this.slides.forEach((slide, index) => {
+                        if (index < this.params.slidesPerView) {
+                            slide.style.opacity = '0';
+                            slide.style.transform = 'translateY(50px)';
+                            setTimeout(() => {
+                                slide.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                                slide.style.opacity = '1';
+                                slide.style.transform = 'translateY(0)';
+                            }, index * 200);
+                        }
+                    });
+                },
+                slideChange: function() {
+                    // Optional: Add slide change animations
+                }
+            }
+        });
+    }
+    
     // Testimonials Swiper
     const testimonialsSwiper = new Swiper('.testimonials-swiper', {
         slidesPerView: 1,

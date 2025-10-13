@@ -83,11 +83,13 @@
                 <div class="filter-buttons-wrapper">
                     <button type="button" class="btn btn-outline-primary filter-btn active me-2 mb-2" data-filter="all">All Products</button>
                     <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="skincare">Skincare</button>
-                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="haircare">Haircare</button>
-                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="supplements">Supplements</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="haircare">Hair Care</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="colourcosmetic">Colour Cosmetic</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="oralcare">Oral Care</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="hygieneinitmatecare">Hygiene & Intimate Care</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="herbinfused">Herb Infused Product</button>
+                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="mensgrooming">Man's Grooming</button>
                     <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="babycare">Baby Care</button>
-                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="personalcare">Personal Care</button>
-                    <button type="button" class="btn btn-outline-primary filter-btn me-2 mb-2" data-filter="aromatherapy">Aromatherapy</button>
                 </div>
             </div>
         </div>
@@ -101,21 +103,48 @@
                 <div class="col-lg-4 col-md-6 mb-4 product-item skincare" data-aos="fade-up" data-aos-delay="100">
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="assets/img/skincare-products.jpg" alt="Organic Face Cream" class="img-fluid">
+                            <img src="assets/img/skincare-products.jpg" alt="Skincare Products" class="img-fluid">
                             <div class="product-overlay">
                                 <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-spa"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="product-info">
                             <span class="product-category">Skincare</span>
-                            <h4>Organic Face Creams</h4>
-                            <p>Premium anti-aging and moisturizing face creams with organic ingredients for all skin types.</p>
+                            <h4>Face Wash & Cleansers</h4>
+                            <p>Gentle cleansers, face washes, and makeup removers for all skin types.</p>
                             <ul class="product-features">
-                                <li>Organic certified ingredients</li>
-                                <li>Multiple formulations available</li>
-                                <li>Custom packaging options</li>
+                                <li>Deep cleansing formulas</li>
+                                <li>Sulfate-free options</li>
+                                <li>Natural ingredients</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4 product-item skincare" data-aos="fade-up" data-aos-delay="150">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/skincare-products.jpg" alt="Creams & Serums" class="img-fluid">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-spa"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Skincare</span>
+                            <h4>Creams, Serums & Toners</h4>
+                            <p>Anti-aging creams, hydrating serums, and balancing toners for healthy skin.</p>
+                            <ul class="product-features">
+                                <li>Anti-aging formulations</li>
+                                <li>Hydrating serums</li>
+                                <li>Skin balancing toners</li>
                             </ul>
                         </div>
                     </div>
@@ -124,92 +153,204 @@
                 <div class="col-lg-4 col-md-6 mb-4 product-item skincare" data-aos="fade-up" data-aos-delay="200">
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="assets/img/skincare-products.jpg" alt="Organic Serums" class="img-fluid">
+                            <img src="assets/img/skincare-products.jpg" alt="Face Packs & Scrubs" class="img-fluid">
                             <div class="product-overlay">
                                 <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-spa"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="product-info">
                             <span class="product-category">Skincare</span>
-                            <h4>Organic Serums</h4>
-                            <p>Concentrated serums targeting specific skin concerns with powerful organic actives.</p>
+                            <h4>Face Packs, Scrubs & Peels</h4>
+                            <p>Exfoliating scrubs, nourishing face masks, and gentle peels for skin renewal.</p>
                             <ul class="product-features">
-                                <li>Vitamin C & Hyaluronic acid</li>
-                                <li>Anti-aging formulations</li>
-                                <li>Lightweight textures</li>
+                                <li>Natural exfoliants</li>
+                                <li>Deep cleansing masks</li>
+                                <li>Gentle chemical peels</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Haircare Products -->
+                <!-- Hair Care Products -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item haircare" data-aos="fade-up" data-aos-delay="250">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/haircare-products.jpg" alt="Shampoos & Conditioners" class="img-fluid">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-cut"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Hair Care</span>
+                            <h4>Shampoos & Conditioners</h4>
+                            <p>Sulfate-free shampoos and nourishing conditioners for all hair types.</p>
+                            <ul class="product-features">
+                                <li>Sulfate-free formulations</li>
+                                <li>Color-safe options</li>
+                                <li>Deep conditioning</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-4 col-md-6 mb-4 product-item haircare" data-aos="fade-up" data-aos-delay="300">
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="assets/img/haircare-products.jpg" alt="Natural Shampoos" class="img-fluid">
+                            <img src="assets/img/haircare-products.jpg" alt="Hair Oils & Masks" class="img-fluid">
                             <div class="product-overlay">
                                 <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-cut"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="product-info">
-                            <span class="product-category">Haircare</span>
-                            <h4>Natural Shampoos</h4>
-                            <p>Sulfate-free organic shampoos for different hair types and concerns.</p>
+                            <span class="product-category">Hair Care</span>
+                            <h4>Hair Oils & Hair Masks</h4>
+                            <p>Nourishing hair oils and intensive hair masks for healthy hair growth.</p>
                             <ul class="product-features">
-                                <li>Sulfate-free formulations</li>
-                                <li>For all hair types</li>
-                                <li>Natural ingredients</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-4 col-md-6 mb-4 product-item haircare" data-aos="fade-up" data-aos-delay="400">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="assets/img/haircare-products.jpg" alt="Hair Oils" class="img-fluid">
-                            <div class="product-overlay">
-                                <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Haircare</span>
-                            <h4>Organic Hair Oils</h4>
-                            <p>Nourishing hair oils with organic botanicals for hair growth and strength.</p>
-                            <ul class="product-features">
-                                <li>Cold-pressed organic oils</li>
-                                <li>Hair growth formulas</li>
+                                <li>Natural hair oils</li>
+                                <li>Protein treatments</li>
                                 <li>Scalp nourishment</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Health Supplements -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item supplements" data-aos="fade-up" data-aos-delay="500">
+                <!-- Colour Cosmetic Products -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item colourcosmetic" data-aos="fade-up" data-aos-delay="350">
                     <div class="product-card">
                         <div class="product-image">
-                            <img src="assets/img/supplements.jpg" alt="Organic Supplements" class="img-fluid">
+                            <img src="assets/img/makeup-products.jpg" alt="Colour Cosmetics" class="img-fluid">
                             <div class="product-overlay">
                                 <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-lipstick"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="product-info">
-                            <span class="product-category">Supplements</span>
-                            <h4>Organic Supplements</h4>
-                            <p>Premium nutritional supplements with organic ingredients for optimal health.</p>
+                            <span class="product-category">Colour Cosmetic</span>
+                            <h4>Makeup & Color Cosmetics</h4>
+                            <p>Foundation, lipsticks, eyeshadows, and complete color cosmetic range.</p>
                             <ul class="product-features">
-                                <li>Capsules & tablets</li>
-                                <li>Organic certified</li>
-                                <li>Third-party tested</li>
+                                <li>Long-lasting formulas</li>
+                                <li>Wide color range</li>
+                                <li>Skin-friendly ingredients</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oral Care Products -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item oralcare" data-aos="fade-up" data-aos-delay="400">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/oral-care.jpg" alt="Oral Care Products" class="img-fluid">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-tooth"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Oral Care</span>
+                            <h4>Toothpaste & Mouth Care</h4>
+                            <p>Natural toothpastes, mouthwashes, and complete oral care solutions.</p>
+                            <ul class="product-features">
+                                <li>Fluoride & fluoride-free options</li>
+                                <li>Natural whitening</li>
+                                <li>Fresh breath formulas</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hygiene & Intimate Care -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item hygieneinitmatecare" data-aos="fade-up" data-aos-delay="450">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/hygiene-care.jpg" alt="Hygiene Products" class="img-fluid">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-heart"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Hygiene & Intimate Care</span>
+                            <h4>Personal Hygiene & Intimate Care</h4>
+                            <p>Gentle intimate washes, feminine hygiene products, and personal care items.</p>
+                            <ul class="product-features">
+                                <li>pH balanced formulas</li>
+                                <li>Gentle & safe ingredients</li>
+                                <li>Dermatologist tested</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Herb Infused Products -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item herbinfused" data-aos="fade-up" data-aos-delay="500">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/herbal-products.jpg" alt="Herbal Products" class="img-fluid">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Herb Infused Product</span>
+                            <h4>Ayurvedic & Herbal Products</h4>
+                            <p>Traditional herb-infused formulations combining ancient wisdom with modern science.</p>
+                            <ul class="product-features">
+                                <li>Natural herb extracts</li>
+                                <li>Ayurvedic formulations</li>
+                                <li>Traditional recipes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Man's Grooming -->
+                <div class="col-lg-4 col-md-6 mb-4 product-item mensgrooming" data-aos="fade-up" data-aos-delay="550">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="assets/img/mens-grooming.jpg" alt="Men's Grooming" class="img-fluid">
+                            <div class="product-overlay">
+                                <div class="product-actions">
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-user-tie"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <span class="product-category">Man's Grooming</span>
+                            <h4>Men's Grooming Range</h4>
+                            <p>Complete grooming solutions for men including beard care, shaving products, and skincare.</p>
+                            <ul class="product-features">
+                                <li>Beard oils & balms</li>
+                                <li>Shaving creams & gels</li>
+                                <li>Men's skincare</li>
                             </ul>
                         </div>
                     </div>
@@ -222,66 +363,20 @@
                             <img src="assets/img/baby-care.jpg" alt="Baby Care Products" class="img-fluid">
                             <div class="product-overlay">
                                 <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
+                                    <div class="product-category-icon">
+                                        <i class="fas fa-baby"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="product-info">
                             <span class="product-category">Baby Care</span>
-                            <h4>Gentle Baby Care</h4>
-                            <p>Ultra-gentle organic baby care products for sensitive skin.</p>
+                            <h4>Baby Care Products</h4>
+                            <p>Ultra-gentle baby care products including shampoos, lotions, and cleansers for sensitive skin.</p>
                             <ul class="product-features">
                                 <li>Hypoallergenic formulas</li>
-                                <li>Pediatrician tested</li>
-                                <li>Tear-free options</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Personal Care -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item personalcare" data-aos="fade-up" data-aos-delay="700">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="assets/img/personal-care.jpg" alt="Personal Care" class="img-fluid">
-                            <div class="product-overlay">
-                                <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Personal Care</span>
-                            <h4>Personal Care Essentials</h4>
-                            <p>Daily personal care products with natural and organic ingredients.</p>
-                            <ul class="product-features">
-                                <li>Body lotions & cleansers</li>
-                                <li>Deodorants & soaps</li>
-                                <li>Natural formulations</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Aromatherapy -->
-                <div class="col-lg-4 col-md-6 mb-4 product-item aromatherapy" data-aos="fade-up" data-aos-delay="800">
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="assets/img/aromatherapy.jpg" alt="Essential Oils" class="img-fluid">
-                            <div class="product-overlay">
-                                <div class="product-actions">
-                                    <button class="btn btn-light btn-sm"><i class="fas fa-eye"></i> View Details</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="product-info">
-                            <span class="product-category">Aromatherapy</span>
-                            <h4>Essential Oils</h4>
-                            <p>Pure essential oils and aromatherapy blends for wellness and relaxation.</p>
-                            <ul class="product-features">
-                                <li>100% pure essential oils</li>
-                                <li>Therapeutic grade</li>
-                                <li>Custom blends available</li>
+                                <li>Pediatrician approved</li>
+                                <li>Tear-free formulations</li>
                             </ul>
                         </div>
                     </div>
@@ -604,6 +699,19 @@
 
         .product-card:hover .product-overlay {
             opacity: 1;
+        }
+        
+        .product-category-icon {
+            color: white;
+            font-size: 3rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.5s ease 0.2s;
+        }
+        
+        .product-card:hover .product-category-icon {
+            opacity: 1;
+            transform: translateY(0);
         }
 
         .product-info {
