@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSwiper();
     initializeCounters();
     initializeScrollEffects();
-    initializeForms();
+    // initializeForms(); // now handled by assets/js/form-handler.js
     initializeParallax();
     
 });
