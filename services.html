@@ -410,20 +410,25 @@
                 <div class="col-lg-4 mb-4">
                     <h5 class="footer-title">Newsletter</h5>
                     <p>Stay updated with our latest news and industry insights.</p>
-                    <form class="newsletter-form">
+                    <form class="newsletter-form" data-source="Footer">
                         <div class="input-group">
-                            <input type="email" class="form-control" placeholder="Your email address" required>
+                            <input type="email" class="form-control" name="email" placeholder="Your email address" required>
                             <button class="btn btn-primary" type="submit">Subscribe</button>
                         </div>
                     </form>
                     <div class="contact-info mt-4">
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>123 Manufacturing Avenue, Industrial Zone, Mumbai, India</span>
+                            <span></span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone"></i>
-                            <span>+91 98765 43210</span>
+                            <span>+91 95379 39731</span>
+                            <span>+91 96241 11115</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>info@tvaraaorganics.com</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-envelope"></i>
@@ -453,6 +458,7 @@
     
     <!-- Custom JS -->
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/form-handler.js"></script>
 
     <style>
         .service-card {
