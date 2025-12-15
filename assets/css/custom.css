@@ -2521,3 +2521,25 @@ img {
     color: var(--dark-gray);
     margin-left: 0.5rem;
 }
+
+/* logo */
+.brand-logo {
+    height: 40px;        /* desktop size */
+    width: auto;
+    max-width: 100%;
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+    .brand-logo {
+        height: 34px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+    .brand-logo {
+        height: 28px;
+    }
+}
+
