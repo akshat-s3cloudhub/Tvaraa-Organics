@@ -48,6 +48,7 @@ html {
 
 body {
     font-family: var(--font-body);
+    font-size: 0.90rem;
     line-height: 1.6;
     color: var(--black);
     background-color: var(--white);
@@ -86,13 +87,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-subtitle {
-    font-size: 1.1rem;
+    font-size: 0.98rem;
     color: var(--dark-gray);
     margin-bottom: 2rem;
 }
 
 .section-text {
-    font-size: 1rem;
+    font-size: 0.90rem;
     color: var(--dark-gray);
     margin-bottom: 1.5rem;
 }
@@ -104,13 +105,13 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
     font-family: var(--font-body);
     font-weight: 500;
-    padding: 12px 30px;
+    padding: 10px 24px;
     border-radius: 50px;
     border: 2px solid transparent;
     transition: var(--transition);
     text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 0.9rem;
+    letter-spacing: 0.8px;
+    font-size: 0.85rem;
 }
 
 .btn-primary {
@@ -170,195 +171,165 @@ h1, h2, h3, h4, h5, h6 {
    NAVIGATION
    ========================================== */
 
-.navbar {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: var(--shadow-light);
+/*
+  Rebuilt header/navbar styles:
+  - Keeps Bootstrap structure
+  - Standard desktop alignment (logo left, menu right)
+  - Clean hover/active states
+  - Mobile dropdown + CTA button behave nicely inside the collapsed menu
+*/
+
+.tvaraa-navbar {
+    background: rgba(255, 255, 255, 0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(43, 61, 79, 0.08);
+    box-shadow: 0 2px 18px rgba(43, 61, 79, 0.06);
     transition: var(--transition);
-    padding: 1rem 0;
+    padding: 0;
 }
 
-.navbar.scrolled {
+.tvaraa-navbar.scrolled {
     background: var(--white);
-    box-shadow: var(--shadow-medium);
-    padding: 0.5rem 0;
+    box-shadow: 0 6px 24px rgba(43, 61, 79, 0.12);
+    padding: 0;
 }
 
-/* Mobile Navigation Improvements */
-.navbar-toggler {
-    border: none;
-    padding: 4px 8px;
-    border-radius: 5px;
-    transition: var(--transition);
+.tvaraa-navbar .navbar-brand {
+    padding: 0;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+    line-height: 1;
 }
 
-.navbar-toggler:focus {
-    box-shadow: none;
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
+.tvaraa-navbar .navbar-logo {
+    display: block;
+    height: 78px;
+    width: auto;
+    max-width: 360px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.22));
 }
 
-.navbar-toggler-icon {
-    width: 24px;
-    height: 18px;
-    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%2843, 61, 79, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+.tvaraa-navbar .navbar-toggler {
+    border: 1px solid rgba(43, 61, 79, 0.25);
+    padding: 0.35rem 0.55rem;
+    border-radius: 10px;
 }
 
-.navbar-brand {
-    font-family: var(--font-heading);
-    font-size: 1.8rem;
-    font-weight: 700;
-    color: var(--primary-color) !important;
-    text-decoration: none;
+.tvaraa-navbar .navbar-toggler:focus {
+    box-shadow: 0 0 0 4px rgba(43, 61, 79, 0.18);
 }
 
-.brand-text {
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.navbar-nav .nav-link {
+/* Desktop links */
+.tvaraa-navbar .navbar-nav .nav-link {
     font-family: var(--font-body);
     font-weight: 500;
-    color: var(--black) !important;
-    margin: 0 0.5rem;
-    padding: 0.5rem 1rem !important;
-    border-radius: 25px;
-    transition: var(--transition);
-}
-
-.navbar-nav .nav-link:hover {
+    font-size: 0.85rem;
     color: var(--primary-color) !important;
-    background-color: rgba(43, 61, 79, 0.1);
+    padding: 0.40rem 0.55rem !important;
+    margin: 0 0.1rem;
+    border-radius: 10px;
+    transition: var(--transition);
+    position: relative;
 }
 
-.dropdown-menu {
-    border: none;
-    box-shadow: var(--shadow-medium);
-    border-radius: 15px;
-    padding: 1rem 0;
-    margin-top: 10px;
+.tvaraa-navbar .navbar-nav .nav-link:hover,
+.tvaraa-navbar .navbar-nav .nav-link:focus {
+    color: var(--secondary-color) !important;
+    background: rgba(43, 61, 79, 0.06);
 }
 
-.dropdown-item {
+.tvaraa-navbar .navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-weight: 600;
+    background: rgba(43, 61, 79, 0.08);
+}
+
+/* CTA in navbar (Get Quote) - works even if it's 'nav-link btn ...' */
+.tvaraa-navbar .navbar-nav .btn {
+    margin-left: 0.5rem;
+}
+
+.tvaraa-navbar .navbar-nav .btn,
+.tvaraa-navbar .navbar-nav .nav-link.btn {
+    padding: 0.55rem 1.1rem !important;
+    border-radius: 999px;
+    box-shadow: none;
+}
+
+/* Dropdown */
+.tvaraa-navbar .dropdown-menu {
+    border: 1px solid rgba(43, 61, 79, 0.10);
+    box-shadow: 0 12px 30px rgba(43, 61, 79, 0.18);
+    border-radius: 14px;
+    padding: 0.5rem;
+    margin-top: 0.6rem;
+}
+
+.tvaraa-navbar .dropdown-item {
     font-family: var(--font-body);
-    padding: 0.75rem 1.5rem;
+    font-size: 0.92rem;
+    padding: 0.55rem 0.85rem;
+    border-radius: 10px;
     transition: var(--transition);
 }
 
-.dropdown-item:hover {
-    background-color: rgba(43, 61, 79, 0.1);
+.tvaraa-navbar .dropdown-item:hover,
+.tvaraa-navbar .dropdown-item:focus {
+    background: rgba(43, 61, 79, 0.08);
     color: var(--primary-color);
 }
 
-/* Mobile Navigation Improvements */
 @media (max-width: 991.98px) {
-    .navbar {
-        padding: 0.8rem 0;
+    .tvaraa-navbar {
+        padding: 0;
     }
-    
-    .navbar-toggler {
-        border: 2px solid var(--primary-color);
-        padding: 6px 10px;
-        border-radius: 8px;
+
+    .tvaraa-navbar .navbar-logo {
+        height: 60px;
+        max-width: 300px;
     }
-    
-    .navbar-toggler:focus {
-        box-shadow: 0 0 0 3px rgba(43, 61, 79, 0.25);
-    }
-    
-    .navbar-collapse {
+
+    .tvaraa-navbar .navbar-collapse {
+        margin-top: 0.75rem;
         background: var(--white);
-        border-radius: 15px;
-        margin-top: 1rem;
-        box-shadow: var(--shadow-medium);
-        border: 1px solid rgba(43, 61, 79, 0.1);
+        border: 1px solid rgba(43, 61, 79, 0.10);
+        border-radius: 14px;
+        box-shadow: 0 18px 40px rgba(43, 61, 79, 0.14);
+        padding: 0.5rem;
         max-height: calc(100vh - 120px);
         overflow-y: auto;
     }
-    
-    .navbar-nav {
-        padding: 1rem 0;
+
+    .tvaraa-navbar .navbar-nav {
+        padding: 0.25rem;
+        gap: 0.25rem;
     }
-    
-    .navbar-nav .nav-link {
+
+    .tvaraa-navbar .navbar-nav .nav-link {
         margin: 0;
-        padding: 1rem 1.5rem !important;
-        border-radius: 0;
-        border-bottom: 1px solid rgba(43, 61, 79, 0.08);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        color: var(--primary-color) !important;
-        font-weight: 500;
+        font-size: 0.92rem;
+        padding: 0.75rem 1rem !important;
+        border-radius: 12px;
+        background: transparent;
     }
-    
-    .navbar-nav .nav-link:hover,
-    .navbar-nav .nav-link:focus {
-        background-color: rgba(43, 61, 79, 0.05);
-        color: var(--primary-color) !important;
-        transform: none;
-    }
-    
-    .navbar-nav .nav-item:last-child .nav-link {
-        border-bottom: none;
-    }
-    
-    .dropdown-menu {
+
+    .tvaraa-navbar .dropdown-menu {
         position: static !important;
         float: none;
         width: 100%;
-        margin-top: 0;
-        background-color: rgba(43, 61, 79, 0.03);
-        border-radius: 0;
-        box-shadow: inset 0 2px 5px rgba(43, 61, 79, 0.1);
-        padding: 0.5rem 0;
-        display: none;
-        border: none;
-        transition: all 0.3s ease;
+        margin-top: 0.25rem;
+        padding: 0.25rem;
+        border-radius: 12px;
+        box-shadow: none;
     }
-    
-    .dropdown-menu.show {
-        display: block;
-        animation: slideDown 0.3s ease-out;
-    }
-    
-    .dropdown-item {
-        padding: 0.75rem 2.5rem;
-        font-size: 0.9rem;
-        color: var(--dark-gray);
-        border-bottom: 1px solid rgba(43, 61, 79, 0.05);
-    }
-    
-    .dropdown-item:last-child {
-        border-bottom: none;
-    }
-    
-    .dropdown-item:hover,
-    .dropdown-item:focus {
-        background-color: rgba(43, 61, 79, 0.08);
-        color: var(--primary-color);
-    }
-    
-    .dropdown-toggle::after {
-        transition: transform 0.3s ease;
-    }
-    
-    .dropdown-toggle[aria-expanded="true"]::after {
-        transform: rotate(180deg);
-    }
-    
-    .nav-item .btn {
-        margin: 1rem 1.5rem 0.5rem;
-        width: calc(100% - 3rem);
+
+    .tvaraa-navbar .navbar-nav .btn,
+    .tvaraa-navbar .navbar-nav .nav-link.btn {
+        width: 100%;
+        margin: 0.25rem 0 0;
         text-align: center;
-        border-radius: 25px;
-    }
-    
-    .navbar-brand {
-        font-size: 1.6rem;
     }
 }
 
