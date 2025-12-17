@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSwiper();
     initializeCounters();
     initializeScrollEffects();
-    // initializeForms(); // now handled by assets/js/form-handler.js
+    initializeForms();
     initializeParallax();
     
 });
@@ -75,49 +75,42 @@ function initializeNavbar() {
         });
     });
 
-    // Fix for mobile dropdown menus using simple toggle (tap to open Services submenu)
+    // Fix for mobile dropdown menus using Bootstrap Dropdown API (tap to open Services submenu)
     const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
     dropdownToggles.forEach(toggle => {
+        // Ensure Bootstrap Dropdown instance exists
+        const dd = bootstrap.Dropdown.getOrCreateInstance(toggle, { autoClose: false });
+        
         // Handle click events for mobile dropdown
         toggle.addEventListener('click', function(e) {
             if (window.innerWidth < 992) {
                 e.preventDefault();
                 e.stopPropagation();
-
+                
                 // Close any other open dropdowns within navbar
-                document.querySelectorAll('.navbar .dropdown-menu.show').forEach(menu => {
-                    if (menu !== this.nextElementSibling) {
-                        menu.classList.remove('show');
-                    }
-                });
                 document.querySelectorAll('.navbar .dropdown-toggle[aria-expanded="true"]').forEach(openTgl => {
-                    if (openTgl !== this) {
-                        openTgl.setAttribute('aria-expanded', 'false');
+                    if (openTgl !== toggle) {
+                        const inst = bootstrap.Dropdown.getOrCreateInstance(openTgl, { autoClose: false });
+                        inst.hide();
                     }
                 });
-
+                
                 // Toggle this dropdown
-                const dropdownMenu = this.nextElementSibling;
-                if (dropdownMenu && dropdownMenu.classList.contains('dropdown-menu')) {
-                    const isExpanded = this.getAttribute('aria-expanded') === 'true';
-                    dropdownMenu.classList.toggle('show');
-                    this.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+                const inst = bootstrap.Dropdown.getOrCreateInstance(this, { autoClose: false });
+                // If not expanded, show; else hide
+                if (this.getAttribute('aria-expanded') === 'true') {
+                    inst.hide();
+                } else {
+                    inst.show();
                 }
             }
         });
-
+        
         // Handle touch events for better mobile experience
         toggle.addEventListener('touchstart', function(e) {
             if (window.innerWidth < 992) {
                 // Add touchstart handler for iOS compatibility
                 this.classList.add('touched');
-            }
-        });
-
-        // Prevent Bootstrap's default dropdown behavior on mobile
-        toggle.addEventListener('mouseenter', function(e) {
-            if (window.innerWidth < 992) {
-                e.preventDefault();
             }
         });
     });
