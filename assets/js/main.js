@@ -113,6 +113,13 @@ function initializeNavbar() {
                 this.classList.add('touched');
             }
         });
+
+        // Prevent Bootstrap's default dropdown behavior on mobile
+        toggle.addEventListener('mouseenter', function(e) {
+            if (window.innerWidth < 992) {
+                e.preventDefault();
+            }
+        });
     });
     
     // Add touch support for iOS devices
